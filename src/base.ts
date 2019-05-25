@@ -1,8 +1,9 @@
-import {Command, flags} from '@oclif/command'
+import {Command} from '@oclif/command'
 
-import fse = require('fs-extra')
 import dotenv = require('dotenv')
+import fse = require('fs-extra')
 import path = require('path');
+import * as YAML from 'yaml'
 
 export  default abstract class Base extends Command {
 
@@ -11,6 +12,9 @@ export  default abstract class Base extends Command {
     }
     config_folder_path(): string{
         return path.join(this.root_folder_path(), 'config')
+    }
+    icon_folder_path(icon_file_name: string): string{
+        return path.join(this.root_folder_path(), 'icon', icon_file_name)
     }
 
     // System
@@ -35,9 +39,11 @@ export  default abstract class Base extends Command {
         return path.join(this.config_folder_path(), 'aral.yml')
     }
     // Project
-
+    project_icon_path(): string{
+        return path.join(process.cwd(), (this.project_env_config() as any)['PROJECT_ICON'])
+    }
     project_env_file_path(): string{
-        return path.join(process.cwd(), 'aral.env')
+        return path.join(process.cwd(), 'aral.dev.env')
     }
     project_env_config(): object{
         try{
@@ -50,8 +56,28 @@ export  default abstract class Base extends Command {
           }
         return dotenv.parse(fse.readFileSync(this.project_env_file_path()))
     }
+    project_import_file_path(): string{
+        return path.join(process.cwd(), 'aral.dev.import.yml')
+    }
+    project_import_config() :object{
+        try{
+            fse.accessSync(this.project_import_file_path())
+        }catch(err){
+            this.warn('Maybe you are not in project root folder')
+            this.warn('You are here: ' + process.cwd())
+            this.error(err)
+        }
+        let temp
+        try{
+            temp = YAML.parse(fse.readFileSync(this.project_import_file_path()).toString())
+        }catch(err){
+            this.warn('Maybe you are not in project root folder')
+            this.error(err)
+        }
+        return temp
+    }
     project_docker_compose_file_path(): string{
-        return path.join(process.cwd(), 'docker-compose-local.yml')
+        return path.join(process.cwd(), 'aral.dev.yml')
     }
 
 }

@@ -381,17 +381,21 @@
         "version": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c",
         "signature": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c"
       },
-      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/fs-extra/index.d.ts": {
-        "version": "18609e55de22295d8a888d6409fe658d6baa89c5d4fe073651dbdc599519c915",
-        "signature": "18609e55de22295d8a888d6409fe658d6baa89c5d4fe073651dbdc599519c915"
-      },
       "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/dotenv/index.d.ts": {
         "version": "2cba9752a0198d6c9cc96bc63463020f6a00de7d8f63cfd6a5eb35975662b09a",
         "signature": "2cba9752a0198d6c9cc96bc63463020f6a00de7d8f63cfd6a5eb35975662b09a"
       },
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/fs-extra/index.d.ts": {
+        "version": "18609e55de22295d8a888d6409fe658d6baa89c5d4fe073651dbdc599519c915",
+        "signature": "18609e55de22295d8a888d6409fe658d6baa89c5d4fe073651dbdc599519c915"
+      },
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/yaml/index.d.ts": {
+        "version": "084841e106991e07726ffbcd69a444a8e07ee77f229ce24b845e3789b2b554bb",
+        "signature": "084841e106991e07726ffbcd69a444a8e07ee77f229ce24b845e3789b2b554bb"
+      },
       "/users/andrea.nigro/visualstudiocodeprojects/aral/src/base.ts": {
-        "version": "c0a0c3e97ac7dae049c31dd37be58f9e948418a2ab83743194a1cb374b673b5f",
-        "signature": "225e1f22822e552ee611d29e289b9a3065cbd1728c23f36030eee772c08405f8"
+        "version": "c583bfca7cbf66373977196abbf6586b6f87de53ec186fdbe3484e3f75246dce",
+        "signature": "97fcd8b807d512bd557e69c4a7f876017ce5ca94d77f62818354053f165fe9fd"
       },
       "/users/andrea.nigro/visualstudiocodeprojects/aral/src/index.ts": {
         "version": "37b0cf2713d8c6a145ad7c76ceb1985af28a0261b72b93a575d5a5dd85701261",
@@ -674,12 +678,28 @@
         "signature": "bcd8d41027083597224b9a0b65e8dd3aef52f6e91aaf070f5802119123162802"
       },
       "/users/andrea.nigro/visualstudiocodeprojects/aral/src/commands/init.ts": {
-        "version": "84ab4f6e7840b5ef5e12d0b142de59116f2007db0d39e6194beb08d91fd118ca",
+        "version": "a9bdee003a4c4ace5a598fae21c6177cf6d6709f0284b808b15fa3bf4cb13bf5",
         "signature": "f6834b400b648adfd6cd1159af6bc62bd019b8d7b56a134bf65a00e13f6406a6"
       },
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/src/commands/new.ts": {
+        "version": "6ed5cf4e62d7e18ae90d047c4df9219561dd2d4a11a532a1f6fdee07f989286a",
+        "signature": "45949f76ce5e469c8ee7041dcb354b23950b4d54c0f87b1599d3658e95994901"
+      },
       "/users/andrea.nigro/visualstudiocodeprojects/aral/src/commands/start.ts": {
-        "version": "8dd65ed88ca8a6c08c85a049bed78004a3371303c2fc960d30d177383db7d0b3",
-        "signature": "af36078587e9992f62ceefd039427f678fd9d7bbf5f9292431da087602736978"
+        "version": "59334177f3c4eefd5b2b36442b09a16855c3dc85836762b5ca041119b4755319",
+        "signature": "2fdd97a5243c96ea33c3e355bc6e9e4915efecc416994b5715b114145087dacf"
+      },
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/through/index.d.ts": {
+        "version": "2d846db276696838aaabdc3c974419d66ab9f866d19cdc869cfb6ecff6754c01",
+        "signature": "2d846db276696838aaabdc3c974419d66ab9f866d19cdc869cfb6ecff6754c01"
+      },
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/inquirer/index.d.ts": {
+        "version": "91b5ce1eeb20e404fde97d265f70e57170100090ac20f4967511bfe0f7c02091",
+        "signature": "91b5ce1eeb20e404fde97d265f70e57170100090ac20f4967511bfe0f7c02091"
+      },
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/rsync/index.d.ts": {
+        "version": "6832c0ea19c042fcb035e9a74e24f3a3e55b643a601a313189994d432cf5f9a0",
+        "signature": "6832c0ea19c042fcb035e9a74e24f3a3e55b643a601a313189994d432cf5f9a0"
       }
     },
     "options": {
@@ -1202,22 +1222,27 @@
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/globals.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts"
       ],
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/dotenv/index.d.ts": [
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/index.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/fs-extra/index.d.ts": [
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/fs.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/index.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/dotenv/index.d.ts": [
-        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/index.d.ts",
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/yaml/index.d.ts": [
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/users/andrea.nigro/visualstudiocodeprojects/aral/src/base.ts": [
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@oclif/command/lib/index.d.ts",
-        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/fs-extra/index.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/dotenv/index.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/fs-extra/index.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/path.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/yaml/index.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1710,11 +1735,36 @@
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/src/commands/new.ts": [
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/src/base.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/fs-extra/index.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/users/andrea.nigro/visualstudiocodeprojects/aral/src/commands/start.ts": [
         "/users/andrea.nigro/visualstudiocodeprojects/aral/src/base.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/execa/index.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/listr/index.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node-notifier/index.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/through/index.d.ts": [
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/stream.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/index.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/inquirer/index.d.ts": [
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/through/index.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/rxjs/index.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/readline.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/rsync/index.d.ts": [
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/child_process.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/index.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
       ]
@@ -1881,7 +1931,11 @@
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@oclif/command/lib/index.d.ts"
       ],
       "/users/andrea.nigro/visualstudiocodeprojects/aral/src/commands/start.ts": [
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/execa/index.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/listr/index.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/src/base.ts"
+      ],
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/src/commands/new.ts": [
         "/users/andrea.nigro/visualstudiocodeprojects/aral/src/base.ts"
       ],
       "/users/andrea.nigro/visualstudiocodeprojects/aral/src/commands/init.ts": [
@@ -2040,6 +2094,25 @@
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/globals.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts"
       ],
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/rsync/index.d.ts": [
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/child_process.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/index.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/through/index.d.ts": [
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/stream.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/index.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/inquirer/index.d.ts": [
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/through/index.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/rxjs/index.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/readline.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node-notifier/index.d.ts": [
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node-notifier/index.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/index.d.ts",
@@ -2060,13 +2133,13 @@
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/dotenv/index.d.ts": [
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/fs-extra/index.d.ts": [
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/fs.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/index.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/fs-extra/index.d.ts": [
-        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/fs.d.ts",
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/dotenv/index.d.ts": [
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/index.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
@@ -2707,6 +2780,10 @@
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/yaml/index.d.ts": [
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
+        "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/globals.d.ts": [
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/globals.d.ts",
         "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/util.d.ts",
@@ -2820,8 +2897,9 @@
       "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/util.d.ts",
       "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/globals.d.ts",
       "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node/ts3.2/index.d.ts",
-      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/fs-extra/index.d.ts",
       "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/dotenv/index.d.ts",
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/fs-extra/index.d.ts",
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/yaml/index.d.ts",
       "/users/andrea.nigro/visualstudiocodeprojects/aral/src/base.ts",
       "/users/andrea.nigro/visualstudiocodeprojects/aral/src/index.ts",
       "/users/andrea.nigro/visualstudiocodeprojects/aral/src/commands/config.ts",
@@ -2894,7 +2972,11 @@
       "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/node-notifier/index.d.ts",
       "/users/andrea.nigro/visualstudiocodeprojects/aral/src/commands/destroyall.ts",
       "/users/andrea.nigro/visualstudiocodeprojects/aral/src/commands/init.ts",
-      "/users/andrea.nigro/visualstudiocodeprojects/aral/src/commands/start.ts"
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/src/commands/new.ts",
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/src/commands/start.ts",
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/through/index.d.ts",
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/inquirer/index.d.ts",
+      "/users/andrea.nigro/visualstudiocodeprojects/aral/node_modules/@types/rsync/index.d.ts"
     ]
   },
   "version": "3.4.5"

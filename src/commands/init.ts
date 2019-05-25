@@ -7,7 +7,6 @@ export default class Init extends Command {
 
   async run() {
 
-    // Installo docker
     // Installo mysql-client
     // Installo rsync
 

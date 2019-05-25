@@ -24,11 +24,14 @@ export default class Start extends Command {
       const temp: string = (this.project_env_config() as any)['PROJECT_NAME']
       this.log('http://' + temp + '.' +domain)
     });
-  
     notifier.notify({
-      title: 'ARAL - ' + (this.project_env_config() as any)['PROJECT_NAME'],
+      title: 'ARAL',
+      subtitle: (this.project_env_config() as any)['PROJECT_NAME'],
       message: 'http://' + (this.project_env_config() as any)['PROJECT_NAME'] + '.localhost',
-      open: 'http://' + (this.project_env_config() as any)['PROJECT_NAME'] + '.localhost'
+      icon: this.icon_folder_path('aral.png'),
+      contentImage: this.project_icon_path(),
+      open: 'http://' + (this.project_env_config() as any)['PROJECT_NAME'] + '.localhost',
+      timeout: 10
     })
 
   }
@@ -42,12 +45,7 @@ export default class Start extends Command {
           'open --background -a Docker && \
           while ! docker system info > /dev/null 2>&1; do sleep 1; done && \
           docker system info'
-        ).then(() =>{
-          notifier.notify({
-            title: 'ARAL',
-            message: 'Docker is now running'
-          })
-        })
+        )
       }
     }
   }
@@ -60,20 +58,13 @@ export default class Start extends Command {
           title: 'ARAL is starting',
           task: (ctx, task) => {
             task.output = 'waiting for ARAL to run'
-            return execa
-              .shell(
-                [
-                  'source ' + this.system_env_file_path(),
-                  'docker-compose -f ' + this.system_docker_compose_file_path() + ' up -d'
-                ].join(' && ')
-              )
-              .then(() => {
-                notifier.notify({
-                  title: 'ARAL',
-                  message: 'Common services are now running'
-                })
-              })
-            }
+            return execa.shell(
+              [
+                'source ' + this.system_env_file_path(),
+                'docker-compose -f ' + this.system_docker_compose_file_path() + ' up -d'
+              ].join(' && ')
+            )
+          }
         }
       ])
     }
@@ -91,22 +82,15 @@ export default class Start extends Command {
               'yubii.localhost',
               'yubii.local'
             ]
-            return execa
-              .shell(
-                [
-                  'source ' + this.system_env_file_path(),
-                  'source ' + this.project_env_file_path(),
-                  'export PROJECT_URLS=' + projects_urls_array.join(','),
-                  'docker-compose -f ' + this.project_docker_compose_file_path() + ' up -d'
-                ].join(' && ')
-              )
-              .then(() => {
-                notifier.notify({
-                  title: 'ARAL',
-                  message: 'Project services are now running'
-                })
-              })
-            }
+            return execa.shell(
+              [
+                'source ' + this.system_env_file_path(),
+                'source ' + this.project_env_file_path(),
+                'export PROJECT_URLS=' + projects_urls_array.join(','),
+                'docker-compose -f ' + this.project_docker_compose_file_path() + ' up -d'
+              ].join(' && ')
+            )
+          }
         }
       ])
     }
