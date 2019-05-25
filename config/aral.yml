@@ -1,0 +1,54 @@
+version: '3.5'
+
+networks:
+
+  traefik:
+    name: traefik
+
+  backend:
+    name: backend
+
+services:
+
+  mysql:
+    image: mariadb
+    container_name: mysql
+    networks:
+      - 'backend'
+    ports:
+      - '3306:3306'
+    volumes:
+      - '~/mariadb:/var/lib/mysql'
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+    labels:
+      - traefik.enable=false
+
+  traefik:
+    image: traefik
+    container_name: traefik
+    command: -c /dev/null --web --docker --logLevel=INFO
+    restart: always
+    networks:
+      - traefik
+    ports:
+      - 80:80
+      - 8080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  portainer:
+    image: portainer/portainer
+    container_name: portainer
+    restart: always
+    networks:
+      - traefik
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - '~/portainer:/data'
+    labels:
+      - traefik.backend=portainer
+      - traefik.port=9000
+      - traefik.frontend.rule=Host:portainer.localhost
+      - traefik.docker.network=traefik

@@ -1,0 +1,71 @@
+{
+  "name": "aral",
+  "description": "An Agnostic Resources Access Layer system",
+  "version": "0.2.9",
+  "author": "iaconba",
+  "bin": {
+    "aral": "./bin/run"
+  },
+  "bugs": "https://github.com/11arn11/aral/issues",
+  "dependencies": {
+    "@oclif/command": "^1.5.13",
+    "@oclif/config": "^1.13.0",
+    "@oclif/plugin-autocomplete": "^0.1.0",
+    "@oclif/plugin-help": "^2.1.6",
+    "@oclif/plugin-not-found": "^1.2.2",
+    "dotenv": "^8.0.0",
+    "execa": "^1.0.0",
+    "fs-extra": "^8.0.1",
+    "listr": "^0.14.3",
+    "node-notifier": "^5.4.0",
+    "path": "^0.12.7",
+    "s": "^0.1.1",
+    "tslib": "^1.9.3"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.0",
+    "@types/dotenv": "^6.1.1",
+    "@types/execa": "^0.9.0",
+    "@types/fs-extra": "^7.0.0",
+    "@types/listr": "^0.14.0",
+    "@types/node": "^10.14.7",
+    "@types/node-notifier": "^5.4.0",
+    "globby": "^8.0.2",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/config",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/11arn11/aral",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "aral",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-not-found",
+      "@oclif/plugin-autocomplete"
+    ]
+  },
+  "repository": "11arn11/aral",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md",
+    "deploy": "npm publish && npm uninstall -g aral && npm i -g aral"
+  },
+  "types": "lib/index.d.ts"
+}
