@@ -2,7 +2,7 @@ import {Command} from '@oclif/command'
 
 import dotenv = require('dotenv')
 import fse = require('fs-extra')
-import path = require('path');
+import path = require('path')
 import * as YAML from 'yaml'
 
 export  default abstract class Base extends Command {
