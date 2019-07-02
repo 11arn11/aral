@@ -5,7 +5,8 @@ export default class Config extends Command {
 
     console.log('This is ARAL config')
     console.log('')
-    
+    console.log(this.system_env_file_path());
+    console.log('')
     console.log(this.system_env_config())
 
   }

@@ -16,21 +16,14 @@ export default class Start extends Command {
       console.error(err);
     })
     this.log('You can watch you project here')
-    const projects_domain_array: Array<string> = [
-      'localhost',
-      'local'
-    ]
-    projects_domain_array.forEach(domain => {
-      const temp: string = (this.project_env_config() as any)['PROJECT_NAME']
-      this.log('http://' + temp + '.' +domain)
-    });
+    this.log('http://' + (this.project_env_config() as any)['WORKSPACE_BASE_URL'])
     notifier.notify({
       title: 'ARAL',
       subtitle: (this.project_env_config() as any)['PROJECT_NAME'],
-      message: 'http://' + (this.project_env_config() as any)['PROJECT_NAME'] + '.localhost',
+      message: 'http://' + (this.project_env_config() as any)['WORKSPACE_BASE_URL'],
       icon: this.icon_folder_path('aral.png'),
       contentImage: this.project_icon_path(),
-      open: 'http://' + (this.project_env_config() as any)['PROJECT_NAME'] + '.localhost',
+      open: 'http://' + (this.project_env_config() as any)['WORKSPACE_BASE_URL'],
       timeout: 10
     })
 
@@ -78,15 +71,13 @@ export default class Start extends Command {
           title: 'Project is starting',
           task: (ctx, task) => {
             task.output = 'waiting for Project services to run'
-            const projects_urls_array = [
-              'yubii.localhost',
-              'yubii.local'
-            ]
+            const client_name = (this.project_env_config() as any)['PROJECT_GROUP'].replace(new RegExp('-', 'g'), '_')
+            const project_name = (this.project_env_config() as any)['PROJECT_NAME'].replace(new RegExp('-', 'g'), '_')
             return execa.shell(
               [
-                'source ' + this.system_env_file_path(),
-                'source ' + this.project_env_file_path(),
-                'export PROJECT_URLS=' + projects_urls_array.join(','),
+                "export $(egrep -v '^#' " + this.system_env_file_path() + " | xargs)",
+                "export $(egrep -v '^#' " + this.project_env_file_path() + " | xargs)",
+                'export MYSQL_DATABASE=' + client_name + '__' + project_name + '__local',
                 'docker-compose -f ' + this.project_docker_compose_file_path() + ' up -d'
               ].join(' && ')
             )
