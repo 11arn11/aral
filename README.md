@@ -19,7 +19,7 @@ $ npm install -g aral
 $ aral COMMAND
 running command...
 $ aral (-v|--version|version)
-aral/0.2.24 darwin-x64 node-v8.11.4
+aral/0.2.25 darwin-x64 node-v8.11.4
 $ aral --help [COMMAND]
 USAGE
   $ aral COMMAND
@@ -65,7 +65,7 @@ USAGE
   $ aral config
 ```
 
-_See code: [src/commands/config.ts](https://github.com/11arn11/aral/blob/v0.2.24/src/commands/config.ts)_
+_See code: [src/commands/config.ts](https://github.com/11arn11/aral/blob/v0.2.25/src/commands/config.ts)_
 
 ## `aral destroyAll`
 
@@ -74,7 +74,7 @@ USAGE
   $ aral destroyAll
 ```
 
-_See code: [src/commands/destroyAll.ts](https://github.com/11arn11/aral/blob/v0.2.24/src/commands/destroyAll.ts)_
+_See code: [src/commands/destroyAll.ts](https://github.com/11arn11/aral/blob/v0.2.25/src/commands/destroyAll.ts)_
 
 ## `aral help [COMMAND]`
 
@@ -102,7 +102,7 @@ USAGE
   $ aral init
 ```
 
-_See code: [src/commands/init.ts](https://github.com/11arn11/aral/blob/v0.2.24/src/commands/init.ts)_
+_See code: [src/commands/init.ts](https://github.com/11arn11/aral/blob/v0.2.25/src/commands/init.ts)_
 
 ## `aral start`
 
@@ -111,5 +111,5 @@ USAGE
   $ aral start
 ```
 
-_See code: [src/commands/start.ts](https://github.com/11arn11/aral/blob/v0.2.24/src/commands/start.ts)_
+_See code: [src/commands/start.ts](https://github.com/11arn11/aral/blob/v0.2.25/src/commands/start.ts)_
 <!-- commandsstop -->
