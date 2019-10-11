@@ -70,17 +70,16 @@ export default class Start extends Command {
         {
           title: 'Project is starting',
           task: (ctx, task) => {
-            task.output = 'waiting for Project services to run'
             const client_name = (this.project_env_config() as any)['PROJECT_GROUP'].replace(new RegExp('-', 'g'), '_')
             const project_name = (this.project_env_config() as any)['PROJECT_NAME'].replace(new RegExp('-', 'g'), '_')
-            return execa.shell(
-              [
-                "export $(egrep -v '^#' " + this.system_env_file_path() + " | xargs)",
-                "export $(egrep -v '^#' " + this.project_env_file_path() + " | xargs)",
-                'export MYSQL_DATABASE=' + client_name + '__' + project_name + '__local',
-                'docker-compose -f ' + this.project_docker_compose_file_path() + ' up -d'
-              ].join(' && ')
-            )
+            const cmd_string = [
+              "export $(egrep -v '^#' " + this.system_env_file_path() + " | xargs)",
+              "export $(egrep -v '^#' " + this.project_env_file_path() + " | xargs)",
+              'export MYSQL_DATABASE=' + client_name + '__' + project_name + '__local',
+              'docker-compose -f ' + this.project_docker_compose_file_path() + ' up -d'
+            ].join(' && ');
+            task.output = 'waiting for Project services to run \n '
+            return execa.shell(cmd_string)
           }
         }
       ])
