@@ -53,7 +53,7 @@ export default class Start extends Command {
             task.output = 'waiting for ARAL to run'
             return execa.shell(
               [
-                'source ' + this.system_env_file_path(),
+                "export $(egrep -v '^#' " + this.system_env_file_path() + " | xargs)",
                 'docker-compose -f ' + this.system_docker_compose_file_path() + ' up -d'
               ].join(' && ')
             )
