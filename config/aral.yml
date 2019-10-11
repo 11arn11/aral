@@ -38,7 +38,7 @@ services:
       - traefik.enable=false
 
   traefik:
-    image: traefik
+    image: traefik:v1.7-alpine
     container_name: traefik
     command: -c /dev/null --web --docker --logLevel=INFO
     restart: always

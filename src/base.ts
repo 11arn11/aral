@@ -43,7 +43,7 @@ export  default abstract class Base extends Command {
         return path.join(process.cwd(), (this.project_env_config() as any)['PROJECT_ICON'])
     }
     project_env_file_path(): string{
-        return path.join(process.cwd(), 'aral.dev.env')
+        return path.join(process.cwd(), 'aral.env')
     }
     project_env_config(): object{
         try{
