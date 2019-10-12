@@ -8,8 +8,6 @@ export default class Ff extends Command {
 
   async run() {
 
-    const {args, flags} = this.parse(Ff)
-
     const workspace_baseurl = (this.project_env_config() as any)['WORKSPACE_BASE_URL']
 
     this.log('workspace url:' + workspace_baseurl)
