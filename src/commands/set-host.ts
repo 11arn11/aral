@@ -2,7 +2,7 @@ import Command from '../base'
 
 import hostile = require('hostile')
 
-export default class Ff extends Command {
+export default class SetHost extends Command {
 
   static description = 'fix firefox issue adding a row in hosts file'
 

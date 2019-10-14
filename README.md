@@ -19,7 +19,7 @@ $ npm install -g aral
 $ aral COMMAND
 running command...
 $ aral (-v|--version|version)
-aral/0.2.35 darwin-x64 node-v8.11.4
+aral/0.2.37 darwin-x64 node-v8.11.4
 $ aral --help [COMMAND]
 USAGE
   $ aral COMMAND
@@ -31,9 +31,9 @@ USAGE
 * [`aral autocomplete [SHELL]`](#aral-autocomplete-shell)
 * [`aral config`](#aral-config)
 * [`aral destroyAll`](#aral-destroyall)
-* [`aral ff`](#aral-ff)
 * [`aral help [COMMAND]`](#aral-help-command)
 * [`aral init`](#aral-init)
+* [`aral set-host`](#aral-set-host)
 * [`aral start`](#aral-start)
 
 ## `aral autocomplete [SHELL]`
@@ -66,7 +66,7 @@ USAGE
   $ aral config
 ```
 
-_See code: [src/commands/config.ts](https://github.com/11arn11/aral/blob/v0.2.35/src/commands/config.ts)_
+_See code: [src/commands/config.ts](https://github.com/11arn11/aral/blob/v0.2.37/src/commands/config.ts)_
 
 ## `aral destroyAll`
 
@@ -75,18 +75,7 @@ USAGE
   $ aral destroyAll
 ```
 
-_See code: [src/commands/destroyAll.ts](https://github.com/11arn11/aral/blob/v0.2.35/src/commands/destroyAll.ts)_
-
-## `aral ff`
-
-fix firefox issue adding a row in hosts file
-
-```
-USAGE
-  $ aral ff
-```
-
-_See code: [src/commands/ff.ts](https://github.com/11arn11/aral/blob/v0.2.35/src/commands/ff.ts)_
+_See code: [src/commands/destroyAll.ts](https://github.com/11arn11/aral/blob/v0.2.37/src/commands/destroyAll.ts)_
 
 ## `aral help [COMMAND]`
 
@@ -114,7 +103,18 @@ USAGE
   $ aral init
 ```
 
-_See code: [src/commands/init.ts](https://github.com/11arn11/aral/blob/v0.2.35/src/commands/init.ts)_
+_See code: [src/commands/init.ts](https://github.com/11arn11/aral/blob/v0.2.37/src/commands/init.ts)_
+
+## `aral set-host`
+
+fix firefox issue adding a row in hosts file
+
+```
+USAGE
+  $ aral set-host
+```
+
+_See code: [src/commands/set-host.ts](https://github.com/11arn11/aral/blob/v0.2.37/src/commands/set-host.ts)_
 
 ## `aral start`
 
@@ -123,5 +123,5 @@ USAGE
   $ aral start
 ```
 
-_See code: [src/commands/start.ts](https://github.com/11arn11/aral/blob/v0.2.35/src/commands/start.ts)_
+_See code: [src/commands/start.ts](https://github.com/11arn11/aral/blob/v0.2.37/src/commands/start.ts)_
 <!-- commandsstop -->
