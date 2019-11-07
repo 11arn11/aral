@@ -19,7 +19,7 @@ $ npm install -g aral
 $ aral COMMAND
 running command...
 $ aral (-v|--version|version)
-aral/0.2.37 darwin-x64 node-v8.11.4
+aral/0.2.38 darwin-x64 node-v8.11.4
 $ aral --help [COMMAND]
 USAGE
   $ aral COMMAND
@@ -30,7 +30,7 @@ USAGE
 <!-- commands -->
 * [`aral autocomplete [SHELL]`](#aral-autocomplete-shell)
 * [`aral config`](#aral-config)
-* [`aral destroy [FILE]`](#aral-destroy-file)
+* [`aral destroy`](#aral-destroy)
 * [`aral destroyAll`](#aral-destroyall)
 * [`aral help [COMMAND]`](#aral-help-command)
 * [`aral init`](#aral-init)
@@ -67,23 +67,18 @@ USAGE
   $ aral config
 ```
 
-_See code: [src/commands/config.ts](https://github.com/11arn11/aral/blob/v0.2.37/src/commands/config.ts)_
+_See code: [src/commands/config.ts](https://github.com/11arn11/aral/blob/v0.2.38/src/commands/config.ts)_
 
-## `aral destroy [FILE]`
+## `aral destroy`
 
 describe the command here
 
 ```
 USAGE
-  $ aral destroy [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ aral destroy
 ```
 
-_See code: [src/commands/destroy.ts](https://github.com/11arn11/aral/blob/v0.2.37/src/commands/destroy.ts)_
+_See code: [src/commands/destroy.ts](https://github.com/11arn11/aral/blob/v0.2.38/src/commands/destroy.ts)_
 
 ## `aral destroyAll`
 
@@ -92,7 +87,7 @@ USAGE
   $ aral destroyAll
 ```
 
-_See code: [src/commands/destroyAll.ts](https://github.com/11arn11/aral/blob/v0.2.37/src/commands/destroyAll.ts)_
+_See code: [src/commands/destroyAll.ts](https://github.com/11arn11/aral/blob/v0.2.38/src/commands/destroyAll.ts)_
 
 ## `aral help [COMMAND]`
 
@@ -120,7 +115,7 @@ USAGE
   $ aral init
 ```
 
-_See code: [src/commands/init.ts](https://github.com/11arn11/aral/blob/v0.2.37/src/commands/init.ts)_
+_See code: [src/commands/init.ts](https://github.com/11arn11/aral/blob/v0.2.38/src/commands/init.ts)_
 
 ## `aral set-host`
 
@@ -131,7 +126,7 @@ USAGE
   $ aral set-host
 ```
 
-_See code: [src/commands/set-host.ts](https://github.com/11arn11/aral/blob/v0.2.37/src/commands/set-host.ts)_
+_See code: [src/commands/set-host.ts](https://github.com/11arn11/aral/blob/v0.2.38/src/commands/set-host.ts)_
 
 ## `aral start`
 
@@ -140,5 +135,5 @@ USAGE
   $ aral start
 ```
 
-_See code: [src/commands/start.ts](https://github.com/11arn11/aral/blob/v0.2.37/src/commands/start.ts)_
+_See code: [src/commands/start.ts](https://github.com/11arn11/aral/blob/v0.2.38/src/commands/start.ts)_
 <!-- commandsstop -->
