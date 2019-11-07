@@ -30,6 +30,7 @@ USAGE
 <!-- commands -->
 * [`aral autocomplete [SHELL]`](#aral-autocomplete-shell)
 * [`aral config`](#aral-config)
+* [`aral destroy [FILE]`](#aral-destroy-file)
 * [`aral destroyAll`](#aral-destroyall)
 * [`aral help [COMMAND]`](#aral-help-command)
 * [`aral init`](#aral-init)
@@ -67,6 +68,22 @@ USAGE
 ```
 
 _See code: [src/commands/config.ts](https://github.com/11arn11/aral/blob/v0.2.37/src/commands/config.ts)_
+
+## `aral destroy [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ aral destroy [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/destroy.ts](https://github.com/11arn11/aral/blob/v0.2.37/src/commands/destroy.ts)_
 
 ## `aral destroyAll`
 
