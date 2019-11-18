@@ -34,7 +34,6 @@ USAGE
 * [`aral destroyAll`](#aral-destroyall)
 * [`aral help [COMMAND]`](#aral-help-command)
 * [`aral init`](#aral-init)
-* [`aral prova [FILE]`](#aral-prova-file)
 * [`aral set-host`](#aral-set-host)
 * [`aral start`](#aral-start)
 
@@ -117,22 +116,6 @@ USAGE
 ```
 
 _See code: [src/commands/init.ts](https://github.com/11arn11/aral/blob/v0.2.39/src/commands/init.ts)_
-
-## `aral prova [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ aral prova [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-```
-
-_See code: [src/commands/prova.ts](https://github.com/11arn11/aral/blob/v0.2.39/src/commands/prova.ts)_
 
 ## `aral set-host`
 
