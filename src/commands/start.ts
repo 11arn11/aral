@@ -1,3 +1,4 @@
+import {flags} from '@oclif/command'
 import Command from '../base'
 
 import execa = require('execa')
@@ -5,6 +6,13 @@ import Listr = require('listr')
 import * as notifier from 'node-notifier'
 
 export default class Start extends Command {
+  static description = 'describe the command here'
+
+  static flags = {
+    // flag with no value (-b, --build)
+    build: flags.boolean({char: 'b'}),
+  }
+
   async run() {
     this.system_env_config()
     this.project_env_config()
@@ -64,6 +72,7 @@ export default class Start extends Command {
   }
 
   project_launcher(){
+    const {flags} = this.parse(Start)
     return {
       title: 'Project',
       task: () => new Listr([
@@ -72,11 +81,12 @@ export default class Start extends Command {
           task: (ctx, task) => {
             const client_name = (this.project_env_config() as any)['PROJECT_GROUP'].replace(new RegExp('-', 'g'), '_')
             const project_name = (this.project_env_config() as any)['PROJECT_NAME'].replace(new RegExp('-', 'g'), '_')
+            const build = flags.build ? ' --build' : ''
             const cmd_string = [
               "export $(egrep -v '^#' " + this.system_env_file_path() + " | xargs)",
               "export $(egrep -v '^#' " + this.project_env_file_path() + " | xargs)",
               'export MYSQL_DATABASE=' + client_name + '__' + project_name + '__local',
-              'docker-compose -f ' + this.project_docker_compose_file_path() + ' up -d'
+              'docker-compose -f ' + this.project_docker_compose_file_path() + ' up -d' + build
             ].join(' && ');
             task.output = 'waiting for Project services to run \n '
             return execa.shell(cmd_string)
