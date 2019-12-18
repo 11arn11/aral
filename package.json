@@ -1,7 +1,7 @@
 {
   "name": "aral",
   "description": "An Agnostic Resources Access Layer system",
-  "version": "0.2.49",
+  "version": "0.2.50",
   "author": "iaconba",
   "bin": {
     "aral": "./bin/run"
