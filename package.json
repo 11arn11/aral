@@ -69,7 +69,7 @@
       "@oclif/plugin-warn-if-update-available"
     ],
     "warn-if-update-available": {
-      "timeoutInDays": 7,
+      "timeoutInDays": 1,
       "message": "C'è la versione <%= latest %> di ARAL (tu hai la <%= config.version %>), scaricala subito (npm i -g aral)."
     }
   },
