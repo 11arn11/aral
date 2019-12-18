@@ -13,6 +13,7 @@
     "@oclif/plugin-autocomplete": "^0.1.0",
     "@oclif/plugin-help": "^2.1.6",
     "@oclif/plugin-not-found": "^1.2.2",
+    "@oclif/plugin-warn-if-update-available": "^1.7.0",
     "cli-ux": "^5.2.1",
     "dotenv": "^8.0.0",
     "execa": "^1.0.0",
@@ -65,7 +66,11 @@
       "@oclif/plugin-help",
       "@oclif/plugin-not-found",
       "@oclif/plugin-autocomplete"
-    ]
+    ],
+    "warn-if-update-available": {
+      "timeoutInDays": 7,
+      "message": "C'è la versione <%= latest %> di ARAL (tu hai la <%= config.version %>), scaricala subito (npm i -g aral)."
+    }
   },
   "repository": "11arn11/aral",
   "scripts": {
