@@ -38,7 +38,7 @@ services:
       - traefik.enable=false
 
   mysql8:
-    image: mysql8
+    image: mysql:8
     container_name: mysql8
     networks:
       - 'backend'
