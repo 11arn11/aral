@@ -37,15 +37,41 @@ services:
     labels:
       - traefik.enable=false
 
+  mysql8:
+    image: mysql8
+    container_name: mysql8
+    networks:
+      - 'backend'
+    ports:
+      - '3308:3306'
+    volumes:
+      - '~/mysql8:/var/lib/mysql'
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+    labels:
+      - traefik.enable=false
+
   traefik:
     image: traefik:v1.7-alpine
     container_name: traefik
-    command: -c /dev/null --web --docker --logLevel=INFO
+
+    command:
+      - -c /dev/null
+      - --web
+      - --docker
+      - --logLevel=INFO
+      - --debug=false
+      - --defaultentrypoints=https,http
+      - --entryPoints=Name:http Address::80
+      - --entryPoints=Name:https Address::443 TLS
+
     restart: always
     networks:
       - traefik
     ports:
       - 80:80
+      - 443:443
       - 8080:8080
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
