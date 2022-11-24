@@ -38,7 +38,7 @@
     "@types/node-notifier": "^5.4.0",
     "@types/rsync": "^0.4.30",
     "@types/yaml": "^1.0.2",
-    "globby": "^8.0.2",
+    "globby": "^13.1.2",
     "ts-node": "^8.1.0",
     "typescript": "^3.4.5"
   },
